@@ -1,0 +1,188 @@
+@import "https://fonts.googleapis.com/css2?family=Lalezar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Lalezar, cursive, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #000; /* Black background */
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  background: #000; /* Black background */
+  border-radius: 1rem;
+  box-shadow: 0px 0px 36px -5px #0f0; /* Green box shadow */
+}
+
+.wrapper {
+  border-radius: 5px;
+  border: 1px solid #333; /* Darkened border color */
+}
+
+.controls,
+li,
+.icons,
+.icons ion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  list-style: none;
+  padding: 12px 15px;
+  border-top: 1px solid #444; /* Darkened border color */
+}
+
+.controls .row .icons {
+  width: 38%;
+}
+
+.controls .row .icons ion-icon {
+  width: 40px; /* Slightly reduced icon width */
+  color: #0f0; /* Green icon color */
+  font-size: 1.5rem; /* Adjusted font size */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #444; /* Darkened border color */
+}
+
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #444; /* Darkened border color */
+}
+
+.controls .row select {
+  color: #555; /* Adjusted text color */
+  border: none;
+  outline: none;
+  font-size: 16px; /* Slightly reduced font size */
+  background: #0f0; /* Green background */
+  padding: 8px; /* Adjusted padding */
+  border-radius: 4px; /* Slightly rounded corners */
+}
+
+.text-input textarea::-webkit-scrollbar {
+  width: 6px; /* Wider scrollbar */
+}
+
+.controls .row select::-webkit-scrollbar {
+  width: 10px; /* Wider scrollbar */
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: #f8f9fa; /* Light gray background */
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #ccc; /* Adjusted thumb color */
+  border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #f8f9fa; /* Light gray border */
+}
+
+.controls .exchange {
+  color: #0f0; /* Green color */
+  cursor: pointer;
+  font-size: 1.5rem; /* Adjusted font size */
+  transition: transform 0.2s ease;
+}
+
+.controls ion-icon:active {
+  transform: scale(0.9);
+}
+
+.container button {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  background: #0f0; /* Green background color */
+  transition: background 0.3s ease; /* Smooth color transition */
+  animation: pulse 1.5s infinite; /* Futuristic pulse animation */
+}
+
+.container button:hover {
+  background: #090; /* Darker green on hover */
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+  50% {
+    box-shadow: 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0;
+  }
+  100% {
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    padding: 20px;
+  }
+
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+
+  .text-input .to-text {
+    border-left: 0px;
+    border-top: 1px solid #ccc;
+  }
+
+  .text-input textarea {
+    height: 200px;
+  }
+
+  .controls .row .icons {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .container button {
+    padding: 13px;
+    font-size: 1.2rem;
+  }
+
+  .controls .row select {
+    font-size: 1.2rem;
+  }
+
+  .controls .exchange {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    zoom: 0.7;
+  }
+}
